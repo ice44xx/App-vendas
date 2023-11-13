@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextProps } from 'react-native';
+import { TextProps, View } from 'react-native';
 import { TextStyled } from './text.styled';
 
 interface Props extends TextProps {

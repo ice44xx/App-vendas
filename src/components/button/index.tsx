@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonStyled } from './button.styled';
 import { ActivityIndicator, TextInputProps } from 'react-native';
-import TextComponent from '../text';
+import TextComponent from '../Text';
 
 interface Props extends TextInputProps {
   title: string;

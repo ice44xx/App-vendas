@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 import { ContainerLogin, Formgroup } from './login.style';
-import Input from '../../components/input';
-import Label from '../../components/label';
-import Button from '../../components/button';
+import Input from '../../components/Input';
+import Label from '../../components/Label';
+import Button from '../../components/Button';
 
 const Login = () => {
   const handleClick = () => {
