@@ -5,11 +5,13 @@ import { TextStyled } from './text.styled';
 interface Props extends TextProps {
   title: string;
   fontSize?: number;
+  color?: string;
+  margin?: number;
 }
 
-const TextComponent: React.FC<Props> = ({ title, fontSize, ...props }) => {
+const TextComponent: React.FC<Props> = ({ title, fontSize, color, margin, ...props }) => {
   return (
-    <TextStyled fontSize={fontSize} {...props}>
+    <TextStyled margin={margin} color={color} fontSize={fontSize} {...props}>
       {title}
     </TextStyled>
   );

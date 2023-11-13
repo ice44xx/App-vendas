@@ -1,6 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
-import { ContainerLogin, Formgroup } from './login.style';
+import { Container, Formgroup, ImageStyled } from './login.style';
 import Input from '../../components/Input';
 import Label from '../../components/Label';
 import Button from '../../components/Button';
@@ -11,19 +10,22 @@ const Login = () => {
   };
 
   return (
-    <View>
-      <ContainerLogin>
-        <Formgroup>
-          <Label text="E-mail ou Username" />
-          <Input placeholderTextColor={'#c7c7c7'} placeholder="Digite seu username" />
-        </Formgroup>
-        <Formgroup>
-          <Label text="Senha" />
-          <Input placeholderTextColor={'#c7c7c7'} placeholder="Digite sua senha" />
-        </Formgroup>
-        <Button loading={false} title="Entrar" onPress={handleClick} />
-      </ContainerLogin>
-    </View>
+    <Container>
+      <ImageStyled source={require('../../assets/images/petlove_logo.png')} />
+      <Formgroup>
+        <Label text="E-mail ou Username" />
+        <Input placeholderTextColor={'#c7c7c7'} placeholder="Digite seu username" />
+      </Formgroup>
+      <Formgroup>
+        <Label text="Senha" />
+        <Input
+          /* errorMsg="E-mail ou Senha incorretos" */
+          placeholderTextColor={'#c7c7c7'}
+          placeholder="Digite sua senha"
+        />
+      </Formgroup>
+      <Button marginTop={20} loading={false} title="Entrar" onPress={handleClick} />
+    </Container>
   );
 };
 

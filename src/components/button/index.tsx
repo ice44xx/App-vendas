@@ -8,20 +8,21 @@ interface Props extends TextInputProps {
   loading?: boolean;
   onPress?: () => void;
   disabled?: boolean;
+  marginTop?: number;
 }
 
-const Button: React.FC<Props> = ({ title, loading, disabled, onPress, ...props }) => {
+const Button: React.FC<Props> = ({ title, loading, disabled, marginTop, onPress, ...props }) => {
   const handlePress = () => {
     if (!loading && !disabled && onPress) {
       onPress();
     }
   };
   return (
-    <ButtonStyled {...props} onPress={handlePress}>
+    <ButtonStyled marginTop={marginTop} {...props} onPress={handlePress}>
       {loading ? (
         <ActivityIndicator color={'#101633'} />
       ) : (
-        <TextComponent fontSize={25} title={title} />
+        <TextComponent color="#101633" fontSize={25} title={title} />
       )}
     </ButtonStyled>
   );
